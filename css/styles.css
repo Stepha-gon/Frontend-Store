@@ -1,8 +1,8 @@
 /** Styles sheet for frontend store project*/
 :root {
-  --primary: #3b4573;
+  --primary: #3a3f55;
   --primary-dark: #767ea6;
-  --secondary: #84764c;
+  --secondary: #d7c48a;
   --secondary-dark: #aea382;
   --background-img: #141c40;
   --black: #000;
@@ -91,13 +91,12 @@ h1 {
 
 .mainnav__link {
   font-family: var(--secondary-font);
-  color: var(--white);
+  color: var(--secondary);
   text-transform: uppercase;
 }
 
-.mainnav__link:hover,
-.mainnav__link--activo {
-  color: var(--secondary);
+.mainnav__link:hover {
+  color: var(--white);
 }
 
 /** FOOTER*/
@@ -230,4 +229,50 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/**PRODUCT SHOWN*/
+.productshown {
+  text-align: center;
+}
+@media (min-width: 630px) {
+  .productshown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+.productshown__img {
+  width: 100%;
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.form__field {
+  border-color: var(--secondary-dark);
+  border-width: 0.5rem;
+  border-style: double;
+  font-size: 1.5rem;
+  padding: 1rem;
+  appearance: none;
+}
+
+.form__submit {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  border-radius: 5rem;
+  border: none;
+  font-size: 2rem;
+  padding: 2rem;
+  font-family: var(--secondary-font);
+  transition: 1s linear;
+  grid-column: 1/3;
+}
+.form__submit:hover {
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
